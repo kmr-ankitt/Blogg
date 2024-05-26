@@ -1,0 +1,9 @@
+@font-face {
+    font-family: mentra ;
+    src: url(/fonts/MENTRA.otf);
+}
+
+*{
+    background-color: #000; 
+    font-family: mentra;
+}
