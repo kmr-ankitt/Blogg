@@ -31,6 +31,22 @@ body {
 body{
     overflow-x: hidden;
 }
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    font-size: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9;
+  }
+  
+
 /* || Navbar */
 
 #logo img {
@@ -50,7 +66,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -117,7 +133,7 @@ body{
 #third-page {
   width: 100%;
   color: #e6ff94;
-  background-color: #002379;
+  background-color: #000;
 }
 
 .third-page-container {
@@ -137,7 +153,7 @@ body{
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  color: #e6ff94;
+  color: #F2F597;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
   
   img {
