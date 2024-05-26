@@ -2,8 +2,96 @@
     font-family: mentra ;
     src: url(/fonts/MENTRA.otf);
 }
+@font-face {
+    font-family: beckan ;
+    src: url(/fonts/Beckan.otf);
+}
+@font-face {
+    font-family: gill sans ;
+    src: url(/fonts/GillSans.otf);
+}
+@font-face {
+    font-family: gill roy ;
+    src: url(/fonts/Gilroy-Black.ttf);
+}
 
 *{
-    background-color: #000; 
-    font-family: mentra;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #1c2120;
 }
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* || Navbar */
+
+#logo img{
+    height: 150px;
+}
+
+
+
+#nav{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70%;
+    /* position: fixed; */
+}
+
+#navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8rem;
+    font-size: 1.5rem;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+#navbar #post a{
+    color: #E6FF94;
+    padding: .5rem;
+    border: 2px solid #fff;
+    font-weight: bold;
+    font-family: gill roy;
+}
+
+
+/* || first page  */
+
+#first-page{
+    height: 100%;
+    width: 100%;
+}
+
+#main h1{
+    font-size: 10rem;
+    font-family: mentra;
+    color: #fff;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+@media screen and (max-width: 800px){
+    #main h1{
+        font-size: 7rem;
+        margin-top: 30vh;
+    } 
+
+    #nav{ 
+        gap: 40%;
+    }
+    
+}
+
