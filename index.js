@@ -1,12 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import methodOverride from 'method-override';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 
 
 // Initialisation
 const app = express();
 const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Middlewares
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
@@ -31,28 +40,51 @@ app.get("/edit", (req, res) => {
 
 // Post requests
 app.post("/post", (req, res) => {
-
-//   const blogTitle = req.body["title"];
-//   const blogBody = req.body["body"];
-//   const blogAuthor = req.body["name"];
-
-  res.render("home.ejs",{});
-  
-});
-
-// Patch requests
-app.patch("/edit", (req, res) => {
-    
     const blogTitle = req.body["title"];
     const blogBody = req.body["body"];
-    const blogAuthor = req.body["author"];
-    
-    res.render("home.ejs",{
-        title: blogTitle,
-        body: blogBody,
-        author : blogAuthor
+    const blogAuthor = req.body["name"];
+  
+    // Append the new section to the end of home.ejs
+    const sectionToAdd = `
+      <section class="third-page">
+        <div class="third-page-container">
+          <div class="view-title">
+            <h2>${blogTitle || 'Blog Title'}</h2>
+          </div>
+          <div class="view-body">
+            <h3>${blogBody || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quod repellat repudiandae repellendus. Nesciunt quam tenetur fuga nemo sunt perspiciatis!'}</h3>
+          </div>
+          <div class="user-control">
+            <div class="view-author">
+              <h2>Author: <span class="view-author-name">${blogAuthor || 'Ankit kumar sahu'}</span></h2>
+            </div>
+            <div class="edit-btn">
+              <a href="/">more</a>
+              <a href="/">delete</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  
+    const currentModuleURL = new URL(import.meta.url);
+    const currentModuleDir = path.dirname(currentModuleURL.pathname);
+    const homeFilePath = path.join(currentModuleDir, 'views', 'home.ejs');
+  
+    fs.readFile(homeFilePath, 'utf8', (err, data) => {
+      if (err) {
+        console.error("Error reading home.ejs:", err);
+        return res.status(500).send("Internal Server Error");
+      }
+  
+      // Append the new section to the existing content
+      const updatedContent = data + sectionToAdd;
+  
+      // Render the updated home.ejs
+      res.send(updatedContent);
     });
-});
+
+  });
 
 app.listen(port, () => {
   console.log(`Server started at port ${port}`);
