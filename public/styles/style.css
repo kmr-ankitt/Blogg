@@ -256,4 +256,53 @@ input[type="text"]:hover {
   background-color: #fcfaf2;
 }
 
+/* || About page  */
 
+.about-page{
+  height: 100%;
+  width: 100%;
+  background-color: #002379;
+}
+
+#about-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.about-con{
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+#about-text{
+  margin-left: 3rem;
+}
+
+#about-text h1{
+  font-size: 3rem;
+  color: #e6ff94;
+  text-transform: uppercase;
+  font-family: pearce;
+}
+
+#about-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+
+#about-icons svg{
+  height: 2rem;
+  fill: #e6ff94;
+}
+
+#about-icons svg:hover{
+  fill: #fff;
+  transition: 0.4s;
+}
