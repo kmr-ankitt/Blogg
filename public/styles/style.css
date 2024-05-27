@@ -93,6 +93,11 @@ body{
   font-family: gill roy;
 }
 
+#home a:hover , #about a:hover {
+  color: #e6ff94;
+  transition: 0.5s;
+}
+
 #navbar #post a:hover {
   background-color: #e6ff94;
   color: #002379;
@@ -138,7 +143,7 @@ body{
 }
 
 #second-page h2 {
-  font-size: 40vw;
+  font-size: 30vw;
   font-weight: 600;
   text-transform: uppercase;
   color: #002379;
@@ -306,7 +311,7 @@ input[type="text"]:hover {
 
 
 
-@media (max-width:600px) {
+@media (max-width:500px) {
   #main h1 {
     font-size: 4rem; 
      /* margin-top: 30vh; */

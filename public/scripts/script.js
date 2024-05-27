@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#second-page h2", {
-  x: "-80%", 
+  x: "-70%", 
   scrollTrigger: {
     trigger: "#second-page", 
     start: "top 50%", 
@@ -11,9 +11,15 @@ gsap.to("#second-page h2", {
   }
 });
 
-gsap.from("#navbar , .about-con", {
+gsap.from("#navbar , .about-con ,form" , {
   y: "-10%",
   opacity: 0,
   duration: 2,
-  // delay: 1
+  delay: .5
+})
+
+gsap.from("#main h1", {
+  opacity: 0,
+  duration : 2,
+  delay: .5
 })
