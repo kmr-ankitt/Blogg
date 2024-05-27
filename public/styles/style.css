@@ -92,6 +92,20 @@ body{
   font-family: gill roy;
 }
 
+#navbar #post a:hover {
+  background-color: #e6ff94;
+  color: #002379;
+  transition: 0.5s;
+  
+}
+
+.edit-btn a:hover{
+  background-color: #e6ff94;
+  color: #002379;
+  transition: 0.5s;
+
+}
+
 /* || first page  */
 
 #first-page {
@@ -304,5 +318,5 @@ input[type="text"]:hover {
 
 #about-icons svg:hover{
   fill: #fff;
-  transition: 0.4s;
+  transition: 0.5s;
 }
