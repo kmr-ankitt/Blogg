@@ -203,3 +203,57 @@ body{
     
     
 } */
+
+
+/* || Post-page */
+
+.post-page{
+  height: 100%;
+  width: 100%;
+  background-color: #002379;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+form {
+  /* background-color: #e6ff94; */
+  /* padding: 5rem;  */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  width: 50%;
+}
+
+input[type="text"], input[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 20px; /* Increase margin to increase height */
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #FFFAE6;
+  font-size: .8rem;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #e6ff94;
+  color: #002379;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #f0ffc1;
+  /* color: #fff; */
+}
+
+input[type="text"]:hover {
+  background-color: #fcfaf2;
+}
+
+
