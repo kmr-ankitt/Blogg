@@ -34,10 +34,11 @@ html,
 body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body{
-    overflow-x: hidden;
+    background-color: #e6ff94;
 }
 
 #cursor{
@@ -110,6 +111,7 @@ body{
 
 #first-page {
     height: 100%;
+    /* min-height: -webkit-fill-available; */
   width: 100%;
   background-color: #002379;
 }
@@ -122,16 +124,7 @@ body{
   margin-top: 20vh;
 }
 
-@media screen and (max-width: 800px) {
-  #main h1 {
-    font-size: 7rem;
-    margin-top: 30vh;
-  }
 
-  #nav {
-    gap: 40%;
-  }
-}
 
 /* || Second Page */
 
@@ -140,7 +133,7 @@ body{
   width: 100%;
   /* background-color: #FF5F00; */
   background-color: #e6ff94;
-  padding: 5vw 0;
+  /* padding: 5vw 0; */
   
 }
 
@@ -207,16 +200,6 @@ body{
 }
 
 
-/* 
-@media screen and (min-width: 1224px) {
-    
-    .third-page-container{
-        height: 100vh;
-        justify-content: center;
-    }
-    
-    
-} */
 
 
 /* || Post-page */
@@ -320,3 +303,46 @@ input[type="text"]:hover {
   fill: #fff;
   transition: 0.5s;
 }
+
+
+
+@media (max-width:600px) {
+  #main h1 {
+    font-size: 4rem; 
+     /* margin-top: 30vh; */
+  }
+
+  #nav {
+    gap: 40%;
+  }
+  
+  .edit-btn  {
+    text-wrap: nowrap;
+  }
+
+  .view-title h2{
+    font-size: 3rem;
+  }
+  
+  .view-body h3{
+    font-size: 1.2rem;
+  }
+}
+
+
+/* 
+#second-page {
+  height: 100vh;
+  width: 100%;
+  /* background-color: #FF5F00; */
+  /* background-color: #e6ff94;
+  padding: 5vw 0;
+  
+}
+
+#second-page h2 {
+  font-size: 40vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #002379;
+} */ 
