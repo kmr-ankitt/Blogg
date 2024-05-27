@@ -11,14 +11,14 @@ gsap.to("#second-page h2", {
   }
 });
 
-gsap.from("#navbar", {
+gsap.from("#navbar , .about-con", {
   y: "-10%",
   opacity: 0,
   duration: 2,
   // delay: 1
 })
 
-gsap.from(".third-page-container .view-title h2 , .third-page-container h3 ",{
+gsap.from(".third-page-container .view-title h2 , .third-page-container h3 ", {
   x: -500,
   duration: 2,
   opacity: 0,
