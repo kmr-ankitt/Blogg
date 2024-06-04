@@ -17,7 +17,7 @@ npm i
 
 Start the server
 ```bash
-npm index.js
+node index.js
 ```
 
 ## Preview
