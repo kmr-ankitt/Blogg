@@ -33,15 +33,17 @@
 
     <!-- || View section -->
     <section class="third-page">
+     <% for (let ele of result){ %>
+
       <div class="third-page-container">
         <div class="view-title">
           <h2>
-             Zealot  
+            <%= ele.title %>  
           </h2>
         </div>
         <div class="view-body">
           <h3>
-            Zealot is a Tree-Walking Interpreter designed for simplicity, efficiency, and ease of use which I developed while learning. It aims to provide a clean and concise syntax while offering powerful features for developing a wide range of applications.
+            <%= ele.body %>  
           </h3>
         </div>
         <div class="user-control">
@@ -49,7 +51,7 @@
             <h2>
               Author:
               <span class="view-author-name">
-                       Ankit kumar sahu
+                <%= ele.author %>  
               </span>
             </h2>
           </div>
@@ -59,10 +61,11 @@
           </div>
         </div>
       </div>
+      <% } %>
     </section>
     
-
-
+    
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
