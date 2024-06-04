@@ -1,10 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import methodOverride from 'method-override';
-import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { BlockList } from "net";
 
 
 
@@ -17,7 +15,6 @@ const content = [{title: "Zealot", body : "Zealot is a Tree-Walking Interpreter 
 
 // Middlewares
 app.set("views", path.join(__dirname, "views"));
-// app.use(express.static("public"));
 app.use(express.static(__dirname + "/public/"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
