@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,7 +16,6 @@ const content = [{title: "Zealot", body : "Zealot is a Tree-Walking Interpreter 
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(__dirname + "/public/"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride('_method'));
 
 
 // Get requests
